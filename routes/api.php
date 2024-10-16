@@ -24,10 +24,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::controller(BreweryController::class)->group(function () {
 
         Route::get('breweries', 'index');
-
+    
     });
 
 });
-
 
 
