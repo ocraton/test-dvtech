@@ -59,14 +59,12 @@ docker compose up
 Accedere al container del backend
 ```
 docker exec -it test-dvtech-laravel.test-1 sh
-
 ```
 
 All'interno del container backend installare le dipendenze:
 
 ```
 composer install
-
 ```
 
 Ora si dovrebbe vedere il backend funzionante su http://localhost
@@ -76,19 +74,22 @@ Accedere al container per il frontend
 
 ```
 docker exec -it nuxt-frontend sh
-
 ```
 
 All'interno del container frontend installare le dipendenze:
 
 ```
 npm install
-
 ```
 
 ed eseguire in locale sulla porta 3000
 
 ```
 npm run dev
+```
 
+#####Esecuzione test 
+All'interno del container del backend laravel
+```
+php artisan test
 ```
