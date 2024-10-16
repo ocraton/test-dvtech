@@ -4,7 +4,7 @@ use App\Models\User;
 
 it('[api] user can login', function () {
 
-    $user =  User::create([
+    $user = User::create([
         'name' => 'root',
         'username' => 'root',
         'email' => 'root@example.com',

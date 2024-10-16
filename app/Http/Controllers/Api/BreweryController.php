@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Api\BaseResponseController;
-use App\Services\BreweryService;
-use Illuminate\Http\Request;
 use App\Http\Resources\BreweriesResource;
+use App\Services\BreweryService;
 
 class BreweryController extends BaseResponseController
 {
@@ -20,7 +18,7 @@ class BreweryController extends BaseResponseController
     {
 
         $page = request()->query('page', 1);
-        
+
         $perPage = request()->query('per_page', 10);
 
         $breweries = $this->breweryService->fetchBreweries($page, $perPage);

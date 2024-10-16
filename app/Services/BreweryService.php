@@ -23,8 +23,7 @@ class BreweryService
 
         } catch (Exception $e) {
 
-            throw new Exception('Error fetching breweries: ' . $e->getMessage());
-
+            throw new Exception('Error fetching breweries: '.$e->getMessage());
         }
     }
 }

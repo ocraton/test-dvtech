@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class BaseResponseController extends Controller
 {
-    
     public function sendResponse($result, $message, $code = 200)
     {
         $response = [
