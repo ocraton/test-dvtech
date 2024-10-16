@@ -88,7 +88,7 @@ ed eseguire in locale sulla porta 3000
 npm run dev
 ```
 
-#####Esecuzione test 
+##### Esecuzione test 
 All'interno del container del backend laravel
 ```
 php artisan test
