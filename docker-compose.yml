@@ -47,6 +47,22 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
+    # Servizio Nuxt (frontend)
+    nuxt:
+        build:
+            context: ./frontend  # Path della cartella del progetto Nuxt
+        container_name: nuxt-frontend
+        volumes:
+            - './frontend:/app'  # Monta la cartella frontend
+        ports:
+            - '3000:3000'  # Espone Nuxt su localhost:3000
+        tty: true
+        environment:
+            NODE_ENV: development
+        networks:
+            - sail
+        command: sh
+
 networks:
     sail:
         driver: bridge

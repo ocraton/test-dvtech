@@ -19,7 +19,11 @@ class BreweryController extends BaseResponseController
     public function index()
     {
 
-        $breweries = $this->breweryService->fetchBreweries(1, 10);
+        $page = request()->query('page', 1);
+        
+        $perPage = request()->query('per_page', 10);
+
+        $breweries = $this->breweryService->fetchBreweries($page, $perPage);
 
         return $this->sendResponse(BreweriesResource::collection(collect($breweries)), 'Breweries retrieved successfully', 200);
 
