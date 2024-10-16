@@ -47,10 +47,9 @@ Scaricare il repo
 ```
 git clone git@github.com:ocraton/test-dvtech.git
 cd test-dvtech
-
 ```
 
-Duplicare .env.example e rinominarlo in .env
+Duplicare `.env.example ` e rinominarlo in `.env`
 
 Creare e avviare i container
 ```
@@ -59,7 +58,7 @@ docker compose up
 
 Accedere al container del backend
 ```
-docker exec -it laravel.test sh
+docker exec -it test-dvtech-laravel.test-1 sh
 
 ```
 
@@ -69,6 +68,9 @@ All'interno del container backend installare le dipendenze:
 composer install
 
 ```
+
+Ora si dovrebbe vedere il backend funzionante su http://localhost
+
 
 Accedere al container per il frontend
 
