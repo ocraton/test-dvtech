@@ -43,10 +43,17 @@ La paginazione è stata gestita volutamente in maniera semplice con i pulsanti a
 
 ### Esecuzione in locale
 
-Scaricare il repo, crea e avvia i container
+Scaricare il repo
 ```
 git clone git@github.com:ocraton/test-dvtech.git
 cd test-dvtech
+
+```
+
+Duplicare .env.example e rinominarlo in .env
+
+Creare e avviare i container
+```
 docker compose up
 ```
 
